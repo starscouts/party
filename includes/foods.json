@@ -1,0 +1,28 @@
+{
+  "alcohol": [
+    "Mojito"
+  ],
+  "drinks": [
+    "Virgin mojito",
+    "Jus de fruits"
+  ],
+  "starters": [
+    "Salade alaska",
+    "Chips"
+  ],
+  "mains": [
+    "Saucisse"
+  ],
+  "desserts": [
+    "Milkshake vanille"
+  ],
+  "_substitutions": {
+    "Virgin mojito": "Vg Mojito",
+    "Salade alaska": "Sld Alaska",
+    "Milkshake vanille": "Mlsk Vanille",
+    "Milkshake fraise": "Mlsk Fraise",
+    "Milkshake chocolat": "Mlsk Choco",
+    "Milkshake vanille-fraise": "Mlsh Van-Fra",
+    "Milkshake vanille-chocolat": "Mlsh Van-Cho"
+  }
+}

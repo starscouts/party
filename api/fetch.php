@@ -1,7 +1,7 @@
 <?php
 
 $credentials = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/includes/credentials.json"), true);
-$WSDL = "http://192.168.1.126/api/wsdl/RpcEncoded";
+$WSDL = "http://10.10.3.12/api/wsdl/RpcEncoded";
 $LOGIN = $credentials["login"];
 $PASS = $credentials["password"];
 

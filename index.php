@@ -136,7 +136,12 @@
                 document.getElementById("emulator").style.display = "";
             }
 
-            if (!(NDEFReader in window)) {
+            window.toCardID = (serial) => {
+                let t = (parseInt(serial.replaceAll(":", ""), 16).toString(36) + parseInt(serial.split("").reverse().join("").replaceAll(":", ""), 16).toString(36)).toUpperCase();
+                return "00000000000000000000".substring(0, 20 - t.length) + t.substring(0, 20);
+            }
+
+            if ('NDEFReader' in window) {
                 const ndef = new NDEFReader();
 
                 function readNfc() {
@@ -152,11 +157,9 @@
                         nfcFail();
                     });
                 }
-            }
-
-            window.toCardID = (serial) => {
-                let t = (parseInt(serial.replaceAll(":", ""), 16).toString(36) + parseInt(serial.split("").reverse().join("").replaceAll(":", ""), 16).toString(36)).toUpperCase();
-                return "00000000000000000000".substring(0, 20 - t.length) + t.substring(0, 20);
+            } else {
+                function readNfc() {}
+                window.nfcFail();
             }
 
             readNfc();

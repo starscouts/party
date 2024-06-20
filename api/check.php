@@ -10,7 +10,7 @@ $data = [
 ];
 
 try {
-    $client = new SoapClient($WSDL, array('login'=> $LOGIN,'password'=> $PASS));
+    $client = new SoapClient($WSDL, array('login'=> $LOGIN, 'password'=> $PASS));
 
     $data["software"] = $client->Version();
     $data["start"] = $client->DatePremierJourBase();

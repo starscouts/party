@@ -1,0 +1,13 @@
+{
+  "name": "PartyManager",
+  "start_url" : "/",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any"
+    }
+  ],
+  "display": "fullscreen",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,28 +1,75 @@
 {
   "alcohol": [
-    "Mojito"
+    "Mojito",
+    "Bière"
   ],
   "drinks": [
     "Virgin mojito",
-    "Jus de fruits"
+    "Jus de fruits",
+    "Coca Cola",
+    "Orangina",
+    "Eau gazeuse",
+    "Bière sans alcool",
+    "Schweppes"
   ],
   "starters": [
-    "Salade alaska",
-    "Chips"
+    "Salade Alaska",
+    "Chips entrée"
   ],
   "mains": [
-    "Saucisse"
+    "Saucisse \"chipolata\"",
+    "Merguez",
+    "Brochette de bœuf"
+  ],
+  "sides": [
+    "Pomme de terre",
+    "Chips plat"
   ],
   "desserts": [
-    "Milkshake vanille"
+    "Milk shake vanille",
+    "Milk shake fraise",
+    "Milk shake chocolat",
+    "Milk shake vanille-fraise",
+    "Milk shake vanille-chocolat",
+    "Milk shake fraise-chocolat",
+    "Coupe 1 boule vanille",
+    "Coupe 1 boule fraise",
+    "Coupe 1 boule chocolat",
+    "Coupe 2 boules vanille-fraise",
+    "Coupe 2 boules vanille-chocolat",
+    "Coupe 2 boules fraise-chocolat"
+  ],
+  "digest": [
+    "Chocolat chaud",
+    "Frappé chocolat",
+    "Lait chaud",
+    "Thé vert",
+    "Thé noir",
+    "Thé aromatisé"
   ],
   "_substitutions": {
     "Virgin mojito": "Vg Mojito",
-    "Salade alaska": "Sld Alaska",
-    "Milkshake vanille": "Mlsk Vanille",
-    "Milkshake fraise": "Mlsk Fraise",
-    "Milkshake chocolat": "Mlsk Choco",
-    "Milkshake vanille-fraise": "Mlsh Van-Fra",
-    "Milkshake vanille-chocolat": "Mlsh Van-Cho"
+    "Jus de fruits": "Jus fruits",
+    "Salade Alaska": "Sld Alaska",
+    "Chips entrée": "Chips [E]",
+    "Saucisse \"chipolata\"": "Chipolata",
+    "Pomme de terre": "Pomme de T",
+    "Chips plat": "Chips [P]",
+    "Brochette de bœuf": "Brochette",
+    "Milk shake vanille-fraise": "Mlsk Van-Fra",
+    "Milk shake vanille-chocolat": "Mlsk Van-Cho",
+    "Milk shake fraise-chocolat": "Mlsk Fra-Cho",
+    "Milk shake vanille": "Mlsk Vanille",
+    "Milk shake fraise": "Mlsk Fraise",
+    "Milk shake chocolat": "Mlsk Choco",
+    "Coupe 1 boule vanille": "1 Boule Van",
+    "Coupe 1 boule fraise": "1 Boule Fra",
+    "Coupe 1 boule chocolat": "1 Boule Cho",
+    "Coupe 2 boules vanille-fraise": "2 Bl Van-Fra",
+    "Coupe 2 boules vanille-chocolat": "2 Bl Van-Cho",
+    "Coupe 2 boules fraise-chocolat": "2 Bl Fra-Cho",
+    "Chocolat chaud": "Choco chaud",
+    "Frappé chocolat": "Choco frd frp",
+    "Thé aromatisé": "Thé aroma"
   }
 }

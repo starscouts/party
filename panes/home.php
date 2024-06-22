@@ -25,7 +25,7 @@
             <a href="/panes/restaurant.php" class="list-group-item list-group-item-action">Restauration et commandes</a>
         </div>
 
-        <a href="/inspect.php" target="_blank">Inspecteur en temps réel</a>
+        <!--<a href="/inspect.php" target="_blank">Inspecteur en temps réel</a>-->
     </div>
 </body>
 </html>

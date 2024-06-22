@@ -55,10 +55,12 @@ try {
         $data["phone"] = $client->AutorisationReceptionSMSEtudiant($id) ? $client->TelephonePortableEtudiant($id) : null;
         $data["email"] = $client->EMailEtudiant($id);
         $data["groups"] = array_map(function ($i) use ($client) {
-            return $client->NomPromotion($i);
+            return $client->CodePromotion($i);
         }, $client->PromotionsEtudiant($id));
         $data["balance"] = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/includes/balances/" . $id . ".json"), true)["balance"];
-        $data["photo"] = base64_encode($client->PhotoEtudiant($id, "png"));
+
+        $photo = $client->PhotoEtudiant($id, "png");
+        $data["photo"] = isset($photo) ? base64_encode($photo) : null;
 
         file_put_contents($_SERVER['DOCUMENT_ROOT'] . "/includes/profiles/" . $id . ".json", json_encode($data, JSON_PRETTY_PRINT));
     } else {

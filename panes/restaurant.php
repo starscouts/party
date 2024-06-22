@@ -52,6 +52,8 @@
                         "starters" => "list-group-item-success",
                         "mains" => "list-group-item-danger",
                         "desserts" => "list-group-item-warning",
+                        "digest" => "list-group-item-dark",
+                        "sides" => "list-group-item-secondary",
                         default => ""
                     } ?>" data-item-category="<?= $name ?>" data-item-title="<?= $item ?>" data-item-value="<?= match ($name) {
                         "alcohol" => $types["MENU_ALCOHOL"][1],
@@ -59,6 +61,8 @@
                         "starters" => $types["MENU_STARTER"][1],
                         "mains" => $types["MENU_MAIN"][1],
                         "desserts" => $types["MENU_DESSERT"][1],
+                        "digest" => $types["MENU_DIGEST"][1],
+                        "sides" => $types["MENU_SIDE"][1],
                         default => ""
                     } ?>">
                         <div style="display: flex; align-items: center;">
@@ -68,6 +72,8 @@
                                 "starters" => "bg-success",
                                 "mains" => "bg-danger",
                                 "desserts" => "bg-warning",
+                                "digest" => "bg-dark",
+                                "sides" => "bg-secondary",
                                 default => ""
                             } ?> <?= match ($name) {
                                 "desserts", "alcohol" => "text-black",
@@ -79,6 +85,8 @@
                 <?php $id++; endforeach; ?>
             <?php endforeach; ?>
         </div>
+
+        <br><br>
     </div>
 </div>
 
@@ -98,7 +106,7 @@
 <script>
     let order = {};
     let receiptModal = new bootstrap.Modal(document.getElementById("receipt"));
-    let substitutions = JSON.parse(`<?= json_encode($foods["_substitutions"] ?? []) ?>`);
+    let substitutions = JSON.parse(atob(`<?= base64_encode(json_encode($foods["_substitutions"] ?? [])) ?>`));
 
     window.onnfcupdate = (data) => {
         window.currentGuestData = data;

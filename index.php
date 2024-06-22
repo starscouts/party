@@ -64,6 +64,10 @@
                 processNfc(data);
             }
 
+            function formatNumber(number) {
+                return number.toString().split("").reverse().join("").match(/.{1,3}/g).reverse().map(i => i.split("").reverse().join("")).join(" ");
+            }
+
             window.processNfc = async (id) => {
                 localStorage.setItem("last-nfc-data", id);
 
@@ -88,7 +92,7 @@
                     document.getElementById("email").innerText = window.currentGuestData["email"] ?? "-";
                     document.getElementById("groups").innerText = window.currentGuestData["groups"].join(", ");
                     document.getElementById("birth").innerText = window.currentGuestData["birthday"];
-                    document.getElementById("score").innerText = window.currentGuestData["balance"] + " point" + (window.currentGuestData['balance'] > 1 ? "s" : "");
+                    document.getElementById("score").innerText = formatNumber(window.currentGuestData["balance"]) + " point" + (window.currentGuestData['balance'] > 1 ? "s" : "");
 
                     if (document.getElementById("frame").contentWindow.onnfcupdate) {
                         document.getElementById("frame").contentWindow.onnfcupdate(window.currentGuestData);
@@ -150,7 +154,7 @@
                         ndef.onreadingerror = () => null;
                         ndef.onreading = (e) => {
                             let decoder = new TextDecoder();
-                            let data = toCardID(e.serialNumber) + "-" + decoder.decode(e.message.records[1].data).toUpperCase();
+                            let data = toCardID(e.serialNumber).substring(0, 10) + "-" + decoder.decode(e.message.records[1].data).toUpperCase().substring(0, 10);
                             processNfc(data);
                         };
                     }).catch((e) => {
